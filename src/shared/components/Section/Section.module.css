@@ -1,0 +1,46 @@
+.section {
+  position: relative;
+  padding-bottom: var(--section-padding);
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 2rem;
+  padding-top: clamp(2rem, 4vw, 3rem);
+  margin-bottom: clamp(3.5rem, 8vw, 6rem);
+}
+
+.eyebrow {
+  display: flex;
+  gap: 0.6rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  padding-top: 0.6rem;
+}
+
+.index {
+  color: var(--color-text-subtle);
+}
+
+.title {
+  font-size: clamp(2.5rem, 6.5vw, 5.25rem);
+  max-width: 14ch;
+}
+
+.subtitle {
+  margin-top: 1.75rem;
+  max-width: 560px;
+  font-size: clamp(1.05rem, 1.5vw, 1.2rem);
+  color: var(--color-text-muted);
+}
+
+@media (max-width: 860px) {
+  .header {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}

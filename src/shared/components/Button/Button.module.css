@@ -1,0 +1,55 @@
+/* Plano, un solo relleno, esquinas rectas. Respuesta al tocar: scale(0.97) en 160 ms. */
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 0 22px;
+  border: 0;
+  border-radius: 0;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1;
+  text-decoration: none;
+  transition:
+    transform 160ms var(--ease-out),
+    background-color 200ms ease,
+    color 200ms ease;
+}
+
+.button:active {
+  transform: scale(0.97);
+}
+
+.solid {
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+
+.quiet {
+  background: var(--surface-2);
+  color: var(--ink);
+}
+
+.note {
+  font-weight: 400;
+  color: var(--ink);
+}
+
+.solid .note {
+  color: var(--accent-ink);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .solid:hover {
+    background: var(--accent-hover);
+  }
+
+  .quiet:hover {
+    background: var(--surface);
+  }
+}
+
+:global(html.reduced) .button:active {
+  transform: none;
+}

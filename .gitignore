@@ -1,0 +1,37 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Playwright (tests e2e)
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+
+# Fuentes con licencia que no permite publicarlas en un repo (las baja scripts/fetch-fonts.mjs)
+/public/fonts/**/*.woff2
+
+# Variables de entorno (cualquier modo de Vite; solo se versiona el ejemplo)
+.env*
+!.env.example
